@@ -1,0 +1,5 @@
+.env
+/dags/CoreSentiment/files
+.devcontainer/
+.github/
+/logs
