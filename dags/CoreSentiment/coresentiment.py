@@ -8,6 +8,7 @@ from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from CoreSentiment.includes.fetch_page import fetch_page
 from CoreSentiment.includes.download_file import download_file
+from CoreSentiment.includes.analysis import save_highest_pageviews_to_file
 base_path = "/opt/airflow/dags/CoreSentiment/files"
 local_filename = ''
 
@@ -51,5 +52,6 @@ with DAG(
     )
     print('loading data into the database table')
 
+    
     download_zip_file >> unzip_file >> fetch_page_views  >> create_table >> load_data_into_db
 
