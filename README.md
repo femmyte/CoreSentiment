@@ -14,3 +14,5 @@ This project was created using a DAG pulling the Wikipedia pageview counts by do
 1. start your Docker desktop
 2. clone and run `docker-compose up -d` to start the application
 
+Final view of the DAG
+<img src="image.png">
